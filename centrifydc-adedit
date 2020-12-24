@@ -12,4 +12,4 @@ set adminuser [lindex $argv 1]
 set adminpw [lindex $argv 2]
 
 bind centrify.lab $adminuser $adminpw
-add_object_value "CN=Agent Machines,OU=Centrify,DC=ad,DC=h-firework,DC=com" member CN=$computername,OU=Computers,OU=Centrify,DC=ad,DC=h-firework,DC=com
+add_object_value "CN=Agent Machines,OU=Centrify,DC=centrify,DC=lab" member CN=$computername,OU=Computers,OU=Centrify,DC=centrify,DC=lab
