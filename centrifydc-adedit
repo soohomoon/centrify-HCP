@@ -1,0 +1,15 @@
+#!/bin/env adedit
+
+package require ade_lib
+
+if { $argc == 0 } {
+        puts "
+        Command format: $argv0 computername adminuser password"
+        exit 1
+}
+set computername [lindex $argv 0]
+set adminuser [lindex $argv 1]
+set adminpw [lindex $argv 2]
+
+bind centrify.lab $adminuser $adminpw
+add_object_value "CN=Agent Machines,OU=Centrify,DC=centrify,DC=lab" member CN=$computername,OU=Computers,OU=Centrify,DC=centrify,DC=lab
