@@ -11,5 +11,5 @@ set computername [lindex $argv 0]
 set adminuser [lindex $argv 1]
 set adminpw [lindex $argv 2]
 
-bind centrify.lab $adminuser $adminpw
+bind ad.h-firework.com $adminuser $adminpw
 add_object_value "CN=Agent Machines,OU=Centrify,DC=ad,DC=h-firework,DC=com" member CN=$computername,OU=Computers,OU=Centrify,DC=ad,DC=h-firework,DC=com
